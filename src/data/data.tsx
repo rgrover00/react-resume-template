@@ -2,6 +2,7 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
+  CalendarDaysIcon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
@@ -11,20 +12,11 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -38,14 +30,15 @@ import {
   Social,
   TestimonialSection,
   TimelineItem,
+  TimelineItemCompany,
 } from './dataDef';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'A website about Ronnie Grover',
+  description: "look for what you cant see",
 };
 
 /**
@@ -69,24 +62,22 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Hi, I'm Ronnie`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
-      </p>
+        <strong className="text-stone-100">Stay-at-Home Dad Developer</strong>, actively seeking 
+        <strong className="text-stone-100">  new projects and work opportunities</strong>
+      </p> 
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+
+      If you have a <strong className="text-stone-100">project or role</strong> in mind, I would  <strong className="text-stone-100"> love</strong>{' '} to discuss it with you
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: 'https://storage.googleapis.com/www.ronniegrover.com/rg-resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +95,15 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I bring the power of cloud expertise and a decade of systems administration experience to small and medium sized businesses. As a certified Professional Google Workspace Administrator and a certified AWS Cloud Practioner I bring a dynamic approach to solving IT business challenges with web design, development and automation. I help companies optimize their online presence, streamline SaaS applications, and bridge the gap between IT and business goals.`,
+ 
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'TX | SC', Icon: MapIcon},
+    {label: 'Age', text: '36', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Indonesian / Italian / Irish / British', Icon: FlagIcon},
+    {label: 'Interests', text: 'Family, Development, Gym', Icon: SparklesIcon},
+    {label: 'Study', text: 'CIT Networking, Google Workspace Admin, AWS Certified Cloud Practitioner', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Solidx', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -122,36 +112,19 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
     name: 'Frontend development',
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 6,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 5,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'HTML',
+        level: 7,
       },
     ],
   },
@@ -160,31 +133,48 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Node.js',
-        level: 8,
+        level: 6,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Python',
+        level: 4,
       },
       {
-        name: 'Golang',
+        name: 'Express',
         level: 4,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Dad developer',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'Luck',
+        level: 1,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Believe',
+        level: 3,
       },
       {
-        name: 'Swift',
+        name: 'Evolve',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'Super Grover developer',
+    skills: [
+      {
+        name: 'Luck',
+        level: 7,
+      },
+      {
+        name: 'Believe',
+        level: 1,
+      },
+      {
+        name: 'Evolve',
         level: 3,
       },
     ],
@@ -196,70 +186,28 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Petro Plumbing Mockup',
+    description: 'Plumbing Company Demo',
+    url: 'https://petroplumbing.netlify.app/',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: '2D Grover Adventures',
+    description: 'Grover World (WIP)',
+    url: 'https://2d-grover.pages.dev/',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Cookies for Skylar',
+    description: '(Coming Soon - V2) - Website for my amazing niece Skylar',
+    url: 'https://sky.solidxit.com/',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Brianna Rahn',
+    description: 'Social Media Influencer',
+    url: 'https://test.solidxit.com/',
     image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
   },
 ];
 
@@ -268,40 +216,66 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'May 2013',
+    location: 'Middletown, New York',
+    title: 'Computer Information Technology - Networking',
+    content: <p>Understanding network components (routers, switches, firewalls), different network types (LAN, WAN, wireless), and network protocols (TCP/IP). How to protect networks from threats, implement security measures, and perform vulnerability assessments. Configuration, troubleshooting, and maintaining networks. Involving hardware and software setup, performance optimization, and user support.</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'September 2023',
+    location: 'Google Cloud Platform (GCP)',
+    title: 'Professional Google Workspace Administrator',
+    content: <p>Transforms business objectives into tangible Google Workspace configurations, policies, and security practices as they relate to users, content, and integrations. Through their understanding of their organization's infrastructure, Google Workspace Administrators let people work together, communicate, and access data in a secure and efficient manner.</p>,
+  },
+  {
+    date: 'September 2023',
+    location: 'Amazon Web Services (AWS)',
+    title: 'AWS Certified Cloud Practitioner',
+    content: <p>Technical professional who manages an organization's cloud computing architecture. They design, deploy, and maintain cloud-based solutions, and work with other IT professionals to ensure the cloud environment is secure, available, and operates as expected.</p>,
   },
 ];
 
-export const experience: TimelineItem[] = [
+export const experience: TimelineItemCompany[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'August 2018 - May 2023',
+    company: '11:11 Systems',
+    title: 'IT Manager',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <div>
+        • Spearheaded the development and implementation of the IT department for a high-growth cloud-solution provider, ensuring smooth operations of IT infrastructure, computer systems, security measures, communication systems, and devices.<div> <br /></div>
+
+        • Designed and implemented automation workflows utilizing Okta, Jamf, Active Directory, Google Workspace, and other essential business systems to streamline employee lifecycle processes. Increased efficiency and accuracy by automating repetitive IT tasks.<div> <br /></div>
+
+        • Partner across business departments to identify, evaluate, and resolve technical issues related to IT systems and integrations. Develop and implement automation workflows to facilitate user provisioning, deprovisioning, and role based access control.<div> <br /></div>
+
+        • Collaborate with IT leadership and the security team to implement and enforce security measures, compliance requirements, and data protection.
+      </div>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'May 2016 - May 2018',
+    company: 'ConvergeOne',
+    title: 'Network Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <div>
+        • Troubleshooted, diagnosed, and resolved critical network outages for government agencies, minimizing downtime and ensuring the continuity of essential services.<div> <br /></div>
+        • Traveled extensively to government sites across New York, performing on-site installation, configuration, and optimization of complex network infrastructure.<div> <br /></div>
+        • Executed network upgrades and migrations for government entities, adhering to strict security protocols and change management procedures.<div> <br /></div>
+        • Provided on-call support for government clients, ensuring rapid response to critical network incidents outside standard business hours.
+      </div>
+    ),
+  },
+  {
+    date: 'May 2012 - May 2016',
+    company: 'Charter Communications',
+    title: 'Commercial Tech Ops Support',
+    content: (
+      <div>
+        • Streamlined technical support processes, reducing average response time by 20% and increasing customer satisfaction by 15%. Utilized foundational web development skills to help coordinate logistical requirements, ensuring timely delivery of materials and reducing operational downtime by 10%.<div> <br /></div>
+        • Conducted thorough hardware inventory of all projects, ensuring accurate tracking and effective allocation to local points of contact, resulting in improved efficiency and streamlined operations.<div> <br /></div>
+        • Utilized technical skills in software testing and analysis to identify and resolve compatibility issues, ensuring smooth operations for end users.<div> <br /></div>
+        • Served as the main point of contact for Tier-1 and Tier-2 support staff, handling all technical issues and escalations.
+      </div>
     ),
   },
 ];
@@ -313,50 +287,45 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Jeff Polczynski',
+      text: 'Ronnie is the IT Manager everyone dreams of: can-do attitude, quick to respond, friendly, motivated, and always gets things resolved. There has been multiple times I had to asked Ronnie and team for some oddball request for help with an impossible due date. Time and again, he took my walk-up request, formulated it into a ticket, and solved my problem quicker than should be possible',
+      image: 'https://storage.googleapis.com/www.ronniegrover.com/images/linkedin01.png',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Andrew Cruz',
+      text: 'Ronnie is an excellent leader and mentor. He leads by example and is not above getting in the trenches and working side by side with his team. He is very knowledgeable and is an asset to any organization he is apart of.',
+      image: 'https://storage.googleapis.com/www.ronniegrover.com/images/linkedin02.png',
     },
   ],
 };
 
 /**
- * Contact section
+ * Contact section 
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'Get in touch, or schedule a meeting',
+  description: 'As stay-at-home dad developer I have a deep understanding of the challenges faced by small businesses, entrepreneurs, and individuals, making everything more relatable and better suited to meeting your specific needs.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'rkg@ronniegrover.com',
+      href: 'mailto:rkg@ronniegrover.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'OK | NY | TX | SC',
+      href: 'https://www.google.ca/maps/place/Mid+Del+Taco+Inc/@35.4494386,-97.4409019,19.5z/data=!4m6!3m5!1s0x87b21620e38f1a41:0xf52603da124d63e6!8m2!3d35.4494486!4d-97.4404811!16s%2Fg%2F1tc_95b_?entry=ttu',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@ronniekgrover',
+      href: 'https://www.instagram.com/ronniekgrover/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'rgrover',
+      href: 'https://github.com/rgrover00',
     },
   ],
 };
@@ -365,9 +334,8 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/rgrover00'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ronniegrover/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/ronniekgrover/'},
+  {label: 'Calendar', Icon: CalendarDaysIcon, href: 'https://cal.com/ronniegrover'},
 ];

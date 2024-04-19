@@ -92,7 +92,12 @@ export interface TimelineItem {
   title: string;
   content: JSX.Element;
 }
-
+export interface TimelineItemCompany {
+  date: string;
+  company: string;
+  title: string;
+  content: JSX.Element;
+}
 /**
  * Testimonial section
  */
